@@ -14,7 +14,7 @@ const errorHandlerMiddleware = require("./middleware/error-handler");
 app.use(express.json());
 app.use(express.static("./public"));
 
-app.get("/stripe", stripeController);
+app.post("/stripe", stripeController);
 // stripe
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
